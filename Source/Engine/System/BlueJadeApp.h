@@ -1,5 +1,7 @@
 #include <Windows.h>
 
+#define DEFAULT_STORAGE_NEEDED 314572800
+
 class BlueJadeApp {
 public:
 	//Members
@@ -10,9 +12,20 @@ public:
 	void MainLoop();
 
 private:
-	//Members
+	/****
+	Members
+	****/
+
+	//The mutex handle for this process
 	HANDLE m_MutexHandle;
 
-	//Methods
+	/****
+	Methods
+	****/
+
+	//Check if the current instance is the only one running
 	bool IsOnlyInstance(LPCTSTR gameTitle);
+
+	//Check if we have a certain amount of space on disk
+	bool CheckStorage(const DWORDLONG diskSpaceNeeded);
 };

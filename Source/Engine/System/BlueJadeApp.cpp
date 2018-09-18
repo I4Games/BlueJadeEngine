@@ -1,6 +1,6 @@
 #include "BlueJadeApp.h"
 #include <iostream>
-#include <string>
+#include <direct.h>
 
 using namespace std;
 
@@ -12,6 +12,13 @@ bool BlueJadeApp::InitInstance()
 	}
 	else {
 		cout << "No other instance of the game is running" << endl;
+	}
+
+	if (!CheckStorage(DEFAULT_STORAGE_NEEDED)) {
+		cout << "Not enough space on disk. Exiting..." << endl;
+	}
+	else {
+		cout << "Disk has enough space" << endl;
 	}
 
 	return true;
@@ -29,6 +36,29 @@ bool BlueJadeApp::IsOnlyInstance(LPCTSTR gameTitle)
 			SetForegroundWindow(hWnd);
 			SetActiveWindow(hWnd);
 		}
+		return false;
+	}
+
+	return true;
+}
+
+bool BlueJadeApp::CheckStorage(const DWORDLONG diskSpaceNeeded)
+{
+	//Get the address of the current drive
+	int const drive = _getdrive();
+
+	//Initialize a structure containing information about the current disk
+	struct _diskfree_t diskfree;
+	_getdiskfree(drive, &diskfree);
+
+	//Calculate the amount of clusters needed in memory
+	unsigned __int64 neededClusters;
+	neededClusters = diskSpaceNeeded /
+		(diskfree.sectors_per_cluster * diskfree.bytes_per_sector);
+
+	//Determine if we have enough clusters
+	if (diskfree.avail_clusters < neededClusters) {
+		cout << "CheckStorage Failure: Not enough physical storage" << endl;
 		return false;
 	}
 
