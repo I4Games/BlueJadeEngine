@@ -16,18 +16,24 @@ bool BlueJadeApp::InitInstance()
 
 	if (!CheckStorage(DEFAULT_STORAGE_NEEDED)) {
 		cout << "Not enough space on disk. Exiting..." << endl;
+		return false;
 	}
 	else {
 		cout << "Disk has enough space" << endl;
 	}
+
+	CheckMemory();
 
 	return true;
 }
 
 bool BlueJadeApp::IsOnlyInstance(LPCTSTR gameTitle)
 {
+	//Create a mutex handle to point to the instance uniquely by name
 	m_MutexHandle = CreateMutex(NULL, TRUE, gameTitle);
 
+	//If the mutex fails to be created, point to the window of the
+	//instance that is already running and return false
 	if (GetLastError() != ERROR_SUCCESS) {
 		HWND hWnd = FindWindow(gameTitle, NULL);
 		if (hWnd) {
@@ -63,6 +69,29 @@ bool BlueJadeApp::CheckStorage(const DWORDLONG diskSpaceNeeded)
 	}
 
 	return true;
+}
+
+void BlueJadeApp::CheckMemory()
+{
+	//Get the global memory status
+	MEMORYSTATUSEX status;
+	GlobalMemoryStatusEx(&status);
+
+	//Display total RAM available
+	cout << "Total RAM: " << status.ullAvailPhys << " bytes available" << endl;
+
+	//Display total VRAM available
+	cout << "Total VRAM: " << status.ullAvailVirtual << " bytes available" << endl;
+
+	//Determine contiguousness of memory (based on the max amount of VRAM the engine would use)
+	char *buff = new char[MAX_CONTIGUOUS_MEMORY_NEEDED];
+	if (buff) {
+		delete[] buff;
+		cout << "The system has " << MAX_CONTIGUOUS_MEMORY_NEEDED << " bytes of memory in a single block available" << endl;
+	}
+	else {
+		cout << "The system does not have " << MAX_CONTIGUOUS_MEMORY_NEEDED << " bytes of memory in a single block available" << endl;
+	}
 }
 
 void BlueJadeApp::CloseApp()

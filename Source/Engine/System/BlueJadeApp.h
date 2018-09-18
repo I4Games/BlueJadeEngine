@@ -1,6 +1,7 @@
 #include <Windows.h>
 
 #define DEFAULT_STORAGE_NEEDED 314572800
+#define MAX_CONTIGUOUS_MEMORY_NEEDED 314572800
 
 class BlueJadeApp {
 public:
@@ -28,4 +29,7 @@ private:
 
 	//Check if we have a certain amount of space on disk
 	bool CheckStorage(const DWORDLONG diskSpaceNeeded);
+
+	//Check RAM and VRAM, as well as how contiguous the VRAM is
+	void CheckMemory();
 };

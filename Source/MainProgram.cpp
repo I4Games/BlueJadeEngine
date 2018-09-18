@@ -11,6 +11,7 @@ int main(void) {
 	g_pGameApp = new BlueJadeApp();
 
 	if (!g_pGameApp->InitInstance()) {
+		g_pGameApp->CloseApp();
 		return 1;
 	}
 
