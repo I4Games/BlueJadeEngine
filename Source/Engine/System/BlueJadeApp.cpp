@@ -1,6 +1,7 @@
 #include "BlueJadeApp.h"
 #include <iostream>
 #include <direct.h>
+#include <string.h>
 
 using namespace std;
 
@@ -23,6 +24,9 @@ bool BlueJadeApp::InitInstance()
 	}
 
 	CheckMemory();
+
+	cout << "CPU Architecture: " << GetCPUArchitecture() << endl;
+	cout << "CPU Speed: " << GetCPUSpeed() << " MHz" << endl;
 
 	return true;
 }
@@ -91,6 +95,57 @@ void BlueJadeApp::CheckMemory()
 	}
 	else {
 		cout << "The system does not have " << MAX_CONTIGUOUS_MEMORY_NEEDED << " bytes of memory in a single block available" << endl;
+	}
+}
+
+DWORD BlueJadeApp::GetCPUSpeed()
+{
+	DWORD BufSize = sizeof(DWORD);
+	DWORD dwMHz = 0;
+	DWORD type = REG_DWORD;
+	HKEY hKey;
+
+	//Check the registry for the key that holds cpu speed
+	long lError = RegOpenKeyEx(HKEY_LOCAL_MACHINE,
+		"HARDWARE\\DESCRIPTION\\System\\CentralProcessor\\0",
+		0,
+		KEY_READ,
+		&hKey);
+
+	//If the key was foundm query it for the value we need
+	if (lError == ERROR_SUCCESS) {
+		RegQueryValueEx(hKey, "~MHz", NULL, NULL, (LPBYTE)&dwMHz, &BufSize);
+	}
+
+	return dwMHz;
+}
+
+LPCTSTR BlueJadeApp::GetCPUArchitecture()
+{
+
+	//Get system information
+	SYSTEM_INFO system_info;
+	GetNativeSystemInfo(&system_info);
+
+	//Retrieve the architecure ID
+	WORD arch_id = system_info.wProcessorArchitecture;
+
+	//Return a value depending on the architecture ID
+	switch (arch_id) {
+		case PROCESSOR_ARCHITECTURE_AMD64:
+			return "x64";
+		case PROCESSOR_ARCHITECTURE_ARM:
+			return "ARM";
+		case PROCESSOR_ARCHITECTURE_ARM64:
+			return "ARM64";
+		case PROCESSOR_ARCHITECTURE_IA64:
+			return "Intel Itanium-based";
+		case PROCESSOR_ARCHITECTURE_INTEL:
+			return "x86";
+		case PROCESSOR_ARCHITECTURE_UNKNOWN:
+			return "Unknown architecture";
+		default:
+			return "Invalid or unrecognized architecture code";
 	}
 }
 

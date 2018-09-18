@@ -32,4 +32,10 @@ private:
 
 	//Check RAM and VRAM, as well as how contiguous the VRAM is
 	void CheckMemory();
+
+	//Return cpu speed
+	DWORD GetCPUSpeed();
+
+	//Return cpu architecture
+	LPCTSTR GetCPUArchitecture();
 };
