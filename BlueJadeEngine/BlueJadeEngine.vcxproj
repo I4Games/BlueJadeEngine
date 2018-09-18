@@ -77,6 +77,14 @@
     <OutDir>..\Game</OutDir>
     <IntDir>..\Temp</IntDir>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>..\Game</OutDir>
+    <IntDir>..\Temp</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>..\Game</OutDir>
+    <IntDir>..\Temp</IntDir>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -122,9 +130,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\Source\Engine\System\BlueJadeApp.cpp" />
     <ClCompile Include="..\Source\MainProgram.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Source\Engine\System\BlueJadeApp.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
