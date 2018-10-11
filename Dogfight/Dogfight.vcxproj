@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\Logic\Events\EventManager.h" />
+    <ClInclude Include="Source\Logic\Game Structures\Actor\ActorComponent.h" />
+    <ClInclude Include="Source\Logic\Game Structures\Ball\Interaction\BallInteractionComponent.h" />
+    <ClInclude Include="Source\Logic\Game Structures\Bullet\Interaction\BulletInteractionComponent.h" />
+    <ClInclude Include="Source\Logic\Game Structures\Bullet\Projectile\BulletProjectileComponent.h" />
+    <ClInclude Include="Source\Logic\Game Structures\Enemy\AI\EnemyAIComponent.h" />
+    <ClInclude Include="Source\Logic\Game Structures\Enemy\Interaction\EnemyInteractionComponent.h" />
+    <ClInclude Include="Source\Logic\Game Structures\Enemy\Weapon\EnemyWeaponComponent.h" />
+    <ClInclude Include="Source\Logic\Game Structures\EnergyPickup\Interaction\EnergyPickupInteractionComponent.h" />
+    <ClInclude Include="Source\Logic\Game Structures\EnergyPickup\Pickup\EnergyPickup.h" />
+    <ClInclude Include="Source\Application\DogfightApp.h" />
+    <ClInclude Include="Source\Logic\Physics\PhysicsManager.h" />
+    <ClInclude Include="Source\Logic\Game Structures\Paddle\Ability\PaddleAbilityComponent.h" />
+    <ClInclude Include="Source\Logic\Game Structures\Paddle\Input\PaddleInputComponent.h" />
+    <ClInclude Include="Source\Logic\Game Structures\Paddle\Interaction\PaddleInteractionComponent.h" />
+    <ClInclude Include="Source\Logic\Game Structures\Structure\Interaction\StructureInteractionComponent.h" />
+    <ClInclude Include="Source\Logic\Game Structures\Component\AI\AIComponentInterface.h" />
+    <ClInclude Include="Source\Logic\Game Structures\Component\Input\InputComponentInterface.h" />
+    <ClInclude Include="Source\Logic\Game Structures\Component\Gameplay\Interaction\InteractionComponentInterface.h" />
+    <ClInclude Include="Source\Logic\Game Structures\Component\Gameplay\Ability\AbilityComponentInterface.h" />
+    <ClInclude Include="Source\Logic\Game Structures\Component\Physics\Collider\ColliderComponentInterface.h" />
+    <ClInclude Include="Source\Logic\Game Structures\Component\Pickup\PickupComponentInterface.h" />
+    <ClInclude Include="Source\Logic\Game Structures\Component\Rendering\RendererComponentInterface.h" />
+    <ClInclude Include="Source\Logic\Game Structures\Component\Weapon\Projectile\ProjectileInterface.h" />
+    <ClInclude Include="Source\Logic\Game Structures\Component\Weapon\WeaponComponentInterface.h" />
+    <ClInclude Include="Source\Logic\Game Structures\Component\Physics\Collider\BoxCollider\BoxColliderComponent.h" />
+    <ClInclude Include="Source\Logic\Game Structures\Component\Rendering\SpriteRenderer\SpriteRendererComponent.h" />
+    <ClInclude Include="Source\View\GraphicsManager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\Logic\Events\EventManager.cpp" />
+    <ClCompile Include="Source\Logic\Game Structures\Actor\ActorComponent.cpp" />
+    <ClCompile Include="Source\Logic\Game Structures\Ball\Interaction\BallInteractionComponent.cpp" />
+    <ClCompile Include="Source\Logic\Game Structures\Bullet\Interaction\BulletInteractionComponent.cpp" />
+    <ClCompile Include="Source\Logic\Game Structures\Bullet\Projectile\BulletProjectileComponent.cpp" />
+    <ClCompile Include="Source\Logic\Game Structures\Enemy\AI\EnemyAIComponent.cpp" />
+    <ClCompile Include="Source\Logic\Game Structures\Enemy\Interaction\EnemyInteractionComponent.cpp" />
+    <ClCompile Include="Source\Logic\Game Structures\Enemy\Weapon\EnemyWeaponComponent.cpp" />
+    <ClCompile Include="Source\Logic\Game Structures\EnergyPickup\Interaction\EnergyPickupInteractionComponent.cpp" />
+    <ClCompile Include="Source\Logic\Game Structures\EnergyPickup\Pickup\EnergyPickup.cpp" />
+    <ClCompile Include="Source\Application\DogfightApp.cpp" />
+    <ClCompile Include="Source\Logic\Physics\PhysicsManager.cpp" />
+    <ClCompile Include="Source\Logic\Game Structures\Paddle\Ability\PaddleAbiltyComponent.cpp" />
+    <ClCompile Include="Source\Logic\Game Structures\Paddle\Input\PaddleInputComponent.cpp" />
+    <ClCompile Include="Source\Logic\Game Structures\Paddle\Interaction\PaddleInteractionComponent.cpp" />
+    <ClCompile Include="Source\Logic\Game Structures\Structure\Interaction\StructureInteractionComponent.cpp" />
+    <ClCompile Include="Source\Logic\Game Structures\Component\Physics\Collider\BoxCollider\BoxColliderComponent.cpp" />
+    <ClCompile Include="Source\Logic\Game Structures\Component\Rendering\SpriteRenderer\SpriteRendererComponent.cpp" />
+    <ClCompile Include="Source\MainProgram.cpp" />
+    <ClCompile Include="Source\View\GraphicsManager.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{09EBD28E-96EC-4264-8416-4A3FC26D42B9}</ProjectGuid>
+    <RootNamespace>Dogfight</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Game</OutDir>
+    <IntDir>.\Temp</IntDir>
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Game</OutDir>
+    <IntDir>.\Temp</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>.\Game</OutDir>
+    <IntDir>.\Temp</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>.\Game</OutDir>
+    <IntDir>.\Temp</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>./Source/Logic/Game Structures</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>./Source/Logic/Game Structures</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>./Source/Logic/Game Structures</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>./Source/Logic/Game Structures</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
