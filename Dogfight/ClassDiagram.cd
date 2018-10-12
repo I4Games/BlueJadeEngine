@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="ActorComponent" Collapsed="true">
+    <Position X="20.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Source\Logic\Game Structures\Actor\ActorComponent.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BallInteractionComponent" Collapsed="true">
+    <Position X="3.5" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Source\Logic\Game Structures\Ball\Interaction\BallInteractionComponent.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BulletInteractionComponent" Collapsed="true">
+    <Position X="9.25" Y="3.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Source\Logic\Game Structures\Bullet\Interaction\BulletInteractionComponent.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BulletProjectileComponent" Collapsed="true">
+    <Position X="19" Y="3.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Source\Logic\Game Structures\Bullet\Projectile\BulletProjectileComponent.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyAIComponent" Collapsed="true">
+    <Position X="31" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Source\Logic\Game Structures\Enemy\AI\EnemyAIComponent.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyInteractionComponent" Collapsed="true">
+    <Position X="0.5" Y="3.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Source\Logic\Game Structures\Enemy\Interaction\EnemyInteractionComponent.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyWeaponComponent" Collapsed="true">
+    <Position X="25" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Source\Logic\Game Structures\Enemy\Weapon\EnemyWeaponComponent.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnergyPickupInteractionComponent" Collapsed="true">
+    <Position X="12.25" Y="3.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Source\Logic\Game Structures\EnergyPickup\Interaction\EnergyPickupInteractionComponent.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnergyPickupComponent" Collapsed="true">
+    <Position X="33.75" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Source\Logic\Game Structures\EnergyPickup\Pickup\EnergyPickup.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PaddleAbilityComponent" Collapsed="true">
+    <Position X="22" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Source\Logic\Game Structures\Paddle\Ability\PaddleAbilityComponent.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PaddleInputComponent" Collapsed="true">
+    <Position X="36.75" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Source\Logic\Game Structures\Paddle\Input\PaddleInputComponent.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PaddleInteractionComponent" Collapsed="true">
+    <Position X="6.25" Y="3.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Source\Logic\Game Structures\Paddle\Interaction\PaddleInteractionComponent.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StructureInteractionComponent" Collapsed="true">
+    <Position X="15.75" Y="3.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Source\Logic\Game Structures\Structure\Interaction\StructureInteractionComponent.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AIComponentInterface" Collapsed="true">
+    <Position X="31" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Source\Logic\Game Structures\Component\AI\AIComponentInterface.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InputComponentInterface" Collapsed="true">
+    <Position X="36.75" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Source\Logic\Game Structures\Component\Input\InputComponentInterface.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InteractionComponentInterface" Collapsed="true">
+    <Position X="8" Y="1.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Source\Logic\Game Structures\Component\Gameplay\Interaction\InteractionComponentInterface.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AbilityComponentInterface" Collapsed="true">
+    <Position X="22" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Source\Logic\Game Structures\Component\Gameplay\Ability\AbilityComponentInterface.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ColliderComponentInterface" Collapsed="true">
+    <Position X="28" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Source\Logic\Game Structures\Component\Physics\Collider\ColliderComponentInterface.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PickupComponentInterface" Collapsed="true">
+    <Position X="33.75" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Source\Logic\Game Structures\Component\Pickup\PickupComponentInterface.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RendererComponentInterface" Collapsed="true">
+    <Position X="39.5" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Source\Logic\Game Structures\Component\Rendering\RendererComponentInterface.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjectileComponentInterface" Collapsed="true">
+    <Position X="19" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Source\Logic\Game Structures\Component\Weapon\Projectile\ProjectileInterface.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WeaponComponentInterface" Collapsed="true">
+    <Position X="25" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Source\Logic\Game Structures\Component\Weapon\WeaponComponentInterface.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BoxColliderComponent" Collapsed="true">
+    <Position X="28" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Source\Logic\Game Structures\Component\Physics\Collider\BoxCollider\BoxColliderComponent.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpriteRendererComponent" Collapsed="true">
+    <Position X="39.5" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Source\Logic\Game Structures\Component\Rendering\SpriteRenderer\SpriteRendererComponent.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
