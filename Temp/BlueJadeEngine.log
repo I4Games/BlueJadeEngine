@@ -1,6 +1,9 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(376,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
 C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(377,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
   BlueJadeApp.cpp
+c:\users\mjose\inuse\gbc\fall_2018\game_engine\bluejadeengine\source\engine\system\bluejadeapp.cpp(172): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+c:\users\mjose\inuse\gbc\fall_2018\game_engine\bluejadeengine\source\engine\system\bluejadeapp.cpp(196): warning C4302: 'type cast': truncation from 'LPSTR' to 'WORD'
+c:\users\mjose\inuse\gbc\fall_2018\game_engine\bluejadeengine\source\engine\system\bluejadeapp.cpp(201): warning C4302: 'type cast': truncation from 'LPSTR' to 'WORD'
   MainProgram.cpp
   Generating Code...
   BlueJadeEngine.vcxproj -> C:\Users\mjose\InUse\GBC\Fall_2018\Game_Engine\BlueJadeEngine\BlueJadeEngine\..\Game\BlueJadeEngine.exe
