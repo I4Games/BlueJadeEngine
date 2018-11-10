@@ -1,23 +1,28 @@
 #include "Engine/System/BlueJadeApp.h"
-#include <iostream>
-#include <string>
+#include <windows.h>  
+#include <stdlib.h>  
+#include <string.h>  
+#include <tchar.h>  
+ 
+BlueJadeApp* mGameApp = nullptr;
 
-using namespace std;
+HINSTANCE hInst;
 
-BlueJadeApp* g_pGameApp = nullptr;
+LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
 
-int main(void) {
+int CALLBACK WinMain(
+	_In_ HINSTANCE hInstance,
+	_In_ HINSTANCE hPrevInstance,
+	_In_ LPSTR     lpCmdLine,
+	_In_ int       nCmdShow
+)
+{
+	mGameApp = new BlueJadeApp();
 
-	g_pGameApp = new BlueJadeApp();
-
-	if (!g_pGameApp->InitInstance()) {
-		g_pGameApp->CloseApp();
+	if (!mGameApp->InitInstance(hInstance, nCmdShow)) {
+		mGameApp->CloseApp();
 		return 1;
 	}
 
-	g_pGameApp->MainLoop();
-
-	g_pGameApp->CloseApp();
-
-	return 0;
+	return mGameApp->MainLoop();
 }
