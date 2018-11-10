@@ -1,3 +1,9 @@
+//mouse input:
+//https://docs.microsoft.com/en-us/windows/desktop/inputdev/using-mouse-input
+
+//keyboard input:
+//https://docs.microsoft.com/en-us/windows/desktop/inputdev/using-keyboard-input
+
 #include "BlueJadeApp.h"
 #include <iostream>
 #include <direct.h>
@@ -7,6 +13,9 @@
 #include <windows.h>
 
 using namespace std;
+
+#define BUFSIZE 65535 
+#define SHIFTED 0x8000 
 
 bool BlueJadeApp::InitInstance(HINSTANCE hInstance, int nCmdShow)
 {
@@ -156,10 +165,16 @@ LPCTSTR BlueJadeApp::GetCPUArchitecture()
 	}
 }
 
+
 LRESULT CALLBACK BlueJadeApp::WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
-	PAINTSTRUCT ps;
+	PAINTSTRUCT ps;	// required by BeginPaint 
 	HDC hdc;
+
+	static POINTS ptsBegin;        // beginning point 
+	static POINTS ptsEnd;          // new endpoint 
+	static POINTS ptsPrevEnd;      // previous endpoint 
+	static BOOL fPrevLine = FALSE; // previous line flag 
 
 	switch (message)
 	{
@@ -176,7 +191,74 @@ LRESULT CALLBACK BlueJadeApp::WndProc(HWND hWnd, UINT message, WPARAM wParam, LP
 		PostQuitMessage(0);
 		break;
 	case WM_LBUTTONDOWN:
+		// Capture mouse input.
+		SetCapture(hWnd);
+		ptsBegin = MAKEPOINTS(lParam);
+		return 0;
 		break;
+	case WM_MOUSEMOVE:
+	
+		// When moving the mouse, the user must hold down
+		// the left mouse button to draw lines/ rectangle
+		if (wParam & MK_LBUTTON)
+		{
+			//// Convert the current cursor coordinates to a
+			//// POINTS structure, and then draw lines/ or a new rectangle.
+			//ptsEnd = MAKEPOINTS(lParam);
+			////draw a rectangle
+			////Rectangle(hdc, ptsBegin.x, ptsBegin.y, ptsEnd.x, ptsEnd.y);
+
+			//MoveToEx(hdc, ptsBegin.x, ptsBegin.y, (LPPOINT)NULL);
+			//LineTo(hdc, ptsEnd.x, ptsEnd.y);
+			//ReleaseDC(hWnd, hdc);
+			// Retrieve a device context (DC) for the client area. 
+
+			hdc = GetDC(hWnd);
+
+			// The following function ensures that pixels of 
+			// the previously drawn line are set to white and 
+			// those of the new line are set to black. 
+
+			SetROP2(hdc, R2_NOTXORPEN);
+
+			// If a line was drawn during an earlier WM_MOUSEMOVE 
+			// message, draw over it. This erases the line by 
+			// setting the color of its pixels to white. 
+
+			if (fPrevLine)
+			{
+				MoveToEx(hdc, ptsBegin.x, ptsBegin.y,
+					(LPPOINT)NULL);
+				LineTo(hdc, ptsPrevEnd.x, ptsPrevEnd.y);
+			}
+
+			// Convert the current cursor coordinates to a 
+			// POINTS structure, and then draw a new line. 
+
+			ptsEnd = MAKEPOINTS(lParam);
+			MoveToEx(hdc, ptsBegin.x, ptsBegin.y, (LPPOINT)NULL);
+			LineTo(hdc, ptsEnd.x, ptsEnd.y);
+
+			//draw a rectangle
+			//Rectangle(hdc, ptsBegin.x, ptsBegin.y, ptsEnd.x, ptsEnd.y);
+
+			// Set the previous line flag, save the ending 
+			// point of the new line, and then release the DC. 
+
+			fPrevLine = TRUE;
+			ptsPrevEnd = ptsEnd;
+			ReleaseDC(hWnd, hdc);
+		}
+		break;
+	case WM_LBUTTONUP:
+		// The user has finished drawing the line. Reset the 
+		// previous line flag, release the mouse cursor, and 
+		// release the mouse capture. 
+		fPrevLine = FALSE;
+		ClipCursor(NULL);
+		ReleaseCapture();
+		return 0;
+
 	default:
 		return DefWindowProc(hWnd, message, wParam, lParam);
 		break;
@@ -218,7 +300,7 @@ bool BlueJadeApp::InitializeWindow(HINSTANCE hInstance, int nCmdShow) {
 		szTitle,
 		WS_OVERLAPPEDWINDOW,
 		CW_USEDEFAULT, CW_USEDEFAULT,
-		500, 100,
+		500, 500,
 		NULL,
 		NULL,
 		hInstance,

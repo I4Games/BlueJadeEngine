@@ -140,9 +140,11 @@
   <ItemGroup>
     <ClCompile Include="..\Source\Engine\System\BlueJadeApp.cpp" />
     <ClCompile Include="..\Source\MainProgram.cpp" />
+    <ClCompile Include="IKeyboardHandler.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Source\Engine\System\BlueJadeApp.h" />
+    <ClInclude Include="IKeyboardHandler.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>

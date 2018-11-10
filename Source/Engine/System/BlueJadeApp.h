@@ -52,4 +52,6 @@ private:
 
 	//Create a new window
 	bool InitializeWindow(HINSTANCE hInstance, int nCmdShow);
+
+	
 };
