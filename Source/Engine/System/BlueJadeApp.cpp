@@ -185,7 +185,7 @@ LRESULT CALLBACK BlueJadeApp::WndProc(HWND hWnd, UINT message, WPARAM wParam, LP
 	static DWORD dwClientY;    // height of client area 
 	static DWORD dwLineLen;    // line length 
 	static DWORD dwLines;      // text lines in client area 
-	static int nCaretPosX = 0; // horizontal position of caret 
+	static int nCaretPosX = 10; // horizontal position of caret 
 	static int nCaretPosY = 2; // vertical position of caret 
 	static int nCharWidth = 0; // width of a character 
 	static int cch = 0;        // characters in buffer 
@@ -206,20 +206,6 @@ LRESULT CALLBACK BlueJadeApp::WndProc(HWND hWnd, UINT message, WPARAM wParam, LP
 
 	switch (message)
 	{
-	/*case WM_PAINT:
-		hdc = BeginPaint(hWnd, &ps);
-
-		TextOut(hdc,
-			5, 5,
-			windowMessage, _tcslen(windowMessage));
-
-		EndPaint(hWnd, &ps);
-
-		break;
-
-	case WM_DESTROY:
-		PostQuitMessage(0);
-		break;*/
 
 	case WM_LBUTTONDOWN:
 		// Capture mouse input.
@@ -289,7 +275,6 @@ LRESULT CALLBACK BlueJadeApp::WndProc(HWND hWnd, UINT message, WPARAM wParam, LP
 		ClipCursor(NULL);
 		ReleaseCapture();
 		return 0;
-
 
 	case WM_CREATE:
 
