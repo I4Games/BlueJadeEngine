@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="SOL2">
+      <UniqueIdentifier>{2dcb8a21-c50e-4b3e-9599-8e5c125aea15}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Source\MainProgram.cpp">
@@ -28,6 +31,12 @@
     </ClInclude>
     <ClInclude Include="..\Source\Engine\System\BlueJadeApp.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SOL2\sol.hpp">
+      <Filter>SOL2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SOL2\sol_forward.hpp">
+      <Filter>SOL2</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

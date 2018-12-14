@@ -72,18 +72,22 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>..\Game</OutDir>
     <IntDir>..\Temp</IntDir>
+    <IncludePath>C:\Users\hercu\Documents\SchoolStuff\SEM5\GED - Engine\BlueJadeEngine\Lib\Lua_Reference\Lua_Reference\include;C:\Users\hercu\Documents\SchoolStuff\SEM5\GED - Engine\BlueJadeEngine\SOL2;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>..\Game</OutDir>
     <IntDir>..\Temp</IntDir>
+    <IncludePath>C:\Users\hercu\Documents\SchoolStuff\SEM5\GED - Engine\BlueJadeEngine\Lib\Lua_Reference\Lua_Reference\include;C:\Users\hercu\Documents\SchoolStuff\SEM5\GED - Engine\BlueJadeEngine\SOL2;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>..\Game</OutDir>
     <IntDir>..\Temp</IntDir>
+    <IncludePath>C:\Users\hercu\Documents\SchoolStuff\SEM5\GED - Engine\BlueJadeEngine\Lib\Lua_Reference\Lua_Reference\include;C:\Users\hercu\Documents\SchoolStuff\SEM5\GED - Engine\BlueJadeEngine\SOL2;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>..\Game</OutDir>
     <IntDir>..\Temp</IntDir>
+    <IncludePath>C:\Users\hercu\Documents\SchoolStuff\SEM5\GED - Engine\BlueJadeEngine\Lib\Lua_Reference\Lua_Reference\include;C:\Users\hercu\Documents\SchoolStuff\SEM5\GED - Engine\BlueJadeEngine\SOL2;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -142,11 +146,18 @@
     <ClCompile Include="..\Source\MainProgram.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\SOL2\sol.hpp" />
+    <ClInclude Include="..\SOL2\sol_forward.hpp" />
     <ClInclude Include="..\Source\Engine\System\BlueJadeApp.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="BlueJadeEngine.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Lib\Lua_Reference\Lua_Reference\Lua_Reference.vcxproj">
+      <Project>{ce25e2f9-3cf4-43ff-acbb-4cab6d85ddc0}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

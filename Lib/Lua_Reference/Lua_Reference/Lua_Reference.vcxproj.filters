@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Include">
+      <UniqueIdentifier>{5f907454-49ea-418b-a812-a84283cd935a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{b46b37b0-ee7f-4f9b-a9f5-305690163576}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\lapi.c">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lauxlib.c">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lbaselib.c">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lbitlib.c">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lcode.c">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lcorolib.c">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lctype.c">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ldblib.c">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ldebug.c">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ldo.c">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ldump.c">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lfunc.c">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lgc.c">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\linit.c">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\liolib.c">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\llex.c">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lmathlib.c">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lmem.c">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\loadlib.c">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lobject.c">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lopcodes.c">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\loslib.c">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lparser.c">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lstate.c">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lstring.c">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lstrlib.c">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ltable.c">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ltablib.c">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ltm.c">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lundump.c">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lutf8lib.c">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lvm.c">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\lzio.c">
+      <Filter>Src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\lauxlib.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lua.hpp">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\luaconf.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lualib.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lapi.h">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lcode.h">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lctype.h">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ldebug.h">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ldo.h">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lfunc.h">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lgc.h">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\llex.h">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\llimits.h">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lmem.h">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lobject.h">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lopcodes.h">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lparser.h">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lprefix.h">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lstate.h">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lstring.h">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ltable.h">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ltm.h">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lundump.h">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lvm.h">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\lzio.h">
+      <Filter>Src</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
