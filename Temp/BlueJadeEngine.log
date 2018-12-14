@@ -1,13 +1,4 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(376,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
 C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(377,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
   BlueJadeApp.cpp
-c:\users\hercu\documents\schoolstuff\sem5\ged - engine\bluejadeengine\source\engine\system\bluejadeapp.cpp(558): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-c:\users\hercu\documents\schoolstuff\sem5\ged - engine\bluejadeengine\source\engine\system\bluejadeapp.cpp(201): warning C4101: 'sz': unreferenced local variable
-c:\users\hercu\documents\schoolstuff\sem5\ged - engine\bluejadeengine\source\engine\system\bluejadeapp.cpp(205): warning C4101: 'hResult': unreferenced local variable
-c:\users\hercu\documents\schoolstuff\sem5\ged - engine\bluejadeengine\source\engine\system\bluejadeapp.cpp(204): warning C4101: 'pcch': unreferenced local variable
-c:\users\hercu\documents\schoolstuff\sem5\ged - engine\bluejadeengine\source\engine\system\bluejadeapp.cpp(607): warning C4302: 'type cast': truncation from 'LPSTR' to 'WORD'
-c:\users\hercu\documents\schoolstuff\sem5\ged - engine\bluejadeengine\source\engine\system\bluejadeapp.cpp(612): warning C4302: 'type cast': truncation from 'LPSTR' to 'WORD'
-c:\users\hercu\documents\schoolstuff\sem5\ged - engine\bluejadeengine\source\engine\system\bluejadeapp.cpp(665): warning C4101: 'bRet': unreferenced local variable
-  MainProgram.cpp
-  Generating Code...
-  BlueJadeEngine.vcxproj -> C:\Users\hercu\Documents\SchoolStuff\SEM5\GED - Engine\BlueJadeEngine\BlueJadeEngine\..\Game\BlueJadeEngine.exe
+  BlueJadeEngine.vcxproj -> C:\Users\hercu\Documents\SchoolStuff\SEM5\GED - Engine\BlueJadeEngine\BlueJadeEngine\BlueJadeEngine\..\Game\BlueJadeEngine.exe

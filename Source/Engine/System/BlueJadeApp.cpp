@@ -12,10 +12,12 @@
 #include <stdlib.h>
 #include <windows.h>
 
+#include "../../../SOL2/sol.hpp"
+
 using namespace std;
 
 #define BUFSIZE 65535 
-#define SHIFTED 0x8000 
+#define SHIFTED 0x8000
 
 bool BlueJadeApp::InitInstance(HINSTANCE hInstance, int nCmdShow)
 {
@@ -204,6 +206,29 @@ LRESULT CALLBACK BlueJadeApp::WndProc(HWND hWnd, UINT message, WPARAM wParam, LP
 	size_t * pcch;
 	HRESULT hResult;
 
+	//included here for demonstration purposes
+	//STILL BROKEN!!!
+	/*
+	sol::state lua;
+
+	lua.open_libraries();
+
+	lua.load_file("LuaExample.lua");
+
+	std::string ex = lua.get<std::string>("hercules");
+
+	int n = ex.length();
+
+	const char * exp =  ex.c_str();
+
+	const TCHAR* example = exp;
+
+	hdc = GetDC(hWnd);
+			
+	TextOut(hdc,
+		25, 25,
+		example, _tcslen(example));
+	*/
 	switch (message)
 	{
 
@@ -553,9 +578,12 @@ LRESULT CALLBACK BlueJadeApp::WndProc(HWND hWnd, UINT message, WPARAM wParam, LP
 	case WM_PAINT:
 		hdc = BeginPaint(hWnd, &ps);
 
+		
 		TextOut(hdc,
 			5, 5,
 			windowMessage, _tcslen(windowMessage));
+		
+		
 
 		EndPaint(hWnd, &ps);
 
