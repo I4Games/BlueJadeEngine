@@ -29,14 +29,23 @@
     <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\Source\Engine\System\BlueJadeApp.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\SOL2\sol.hpp">
       <Filter>SOL2</Filter>
     </ClInclude>
     <ClInclude Include="..\SOL2\sol_forward.hpp">
       <Filter>SOL2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Engine\System\BlueJadeApp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Engine\System\EventSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Engine\System\FastDelegate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Engine\System\FastDelegateBind.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -149,6 +149,9 @@
     <ClInclude Include="..\SOL2\sol.hpp" />
     <ClInclude Include="..\SOL2\sol_forward.hpp" />
     <ClInclude Include="..\Source\Engine\System\BlueJadeApp.h" />
+    <ClInclude Include="..\Source\Engine\System\EventSystem.h" />
+    <ClInclude Include="..\Source\Engine\System\FastDelegate.h" />
+    <ClInclude Include="..\Source\Engine\System\FastDelegateBind.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>

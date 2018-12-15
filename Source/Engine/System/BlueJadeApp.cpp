@@ -5,6 +5,7 @@
 //https://docs.microsoft.com/en-us/windows/desktop/inputdev/using-keyboard-input
 
 #include "BlueJadeApp.h"
+#include "EventSystem.h"
 #include <iostream>
 #include <direct.h>
 #include <string.h>
@@ -45,6 +46,8 @@ bool BlueJadeApp::InitInstance(HINSTANCE hInstance, int nCmdShow)
 	if (!InitializeWindow(hInstance, nCmdShow)) {
 		return false;
 	}
+
+	EventManager evManager("EventManager", true);
 
 	return true;
 }
@@ -208,7 +211,7 @@ LRESULT CALLBACK BlueJadeApp::WndProc(HWND hWnd, UINT message, WPARAM wParam, LP
 
 	//included here for demonstration purposes
 	//STILL BROKEN!!!
-	/*
+	
 	sol::state lua;
 
 	lua.open_libraries();
@@ -228,7 +231,7 @@ LRESULT CALLBACK BlueJadeApp::WndProc(HWND hWnd, UINT message, WPARAM wParam, LP
 	TextOut(hdc,
 		25, 25,
 		example, _tcslen(example));
-	*/
+	
 	switch (message)
 	{
 
